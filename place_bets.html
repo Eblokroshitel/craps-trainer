@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Craps Trainer</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<nav class="bet-navigation">
+    <a href="prop_box.html">Prop Bets</a>
+    <a href="place_bets.html">Place Bets</a>
+    <a href="lay_odds.html">Laying Odds</a>
+</nav>
+
+<main class="container">
+
+    <header class="header">
+        <h1>Craps Trainer</h1>
+        <p>Practice your payout calculations</p>
+    </header>
+
+
+    <section class="trainer-card">
+
+        <div class="card-top">
+            <div>
+                <span class="category">PLACE BETS</span>
+                <h2>Calculate the payout</h2>
+            </div>
+
+            <!-- <div class="score">
+                <span>Score</span>
+                <strong>0 / 0</strong>
+            </div> -->
+        </div>
+
+
+        <div class="question">
+
+            <div class="question-label">
+                PLACE BET
+            </div>
+
+            <div class="bet">
+                <span class="amount">$25</span>
+
+                <span class="separator">on</span>
+
+                <span class="number">6</span>
+            </div>
+
+        </div>
+
+
+        <div class="answer">
+
+            <label for="answer">
+                Your answer
+            </label>
+
+            <div class="answer-input">
+                <span>$</span>
+
+                <input
+                    id="answer"
+                    type="number"
+                    step="0.01"
+                    placeholder="0.00"
+                    autocomplete="off"
+                >
+            </div>
+
+        </div>
+
+
+        <button id="checkAnswer" class="button">
+            Check Answer
+        </button>
+
+
+        <div id="feedback" class="feedback hidden">
+            <span id="feedbackTitle"></span>
+            <span id="feedbackText"></span>
+        </div>
+
+
+        <button id="nextQuestion" class="next-button hidden">
+            Next Question
+        </button>
+
+    </section>
+
+
+    <div class="stats">
+
+        <div class="stat">
+            <span>Correct</span>
+            <strong id="correctCount">0</strong>
+        </div>
+
+        <div class="stat">
+            <span>Wrong</span>
+            <strong id="wrongCount">0</strong>
+        </div>
+
+        <div class="stat">
+            <span>Accuracy</span>
+            <strong id="accuracy">0%</strong>
+        </div>
+
+    </div>
+
+
+    <footer>
+        By Dmitrii Tazetdinov
+    </footer>
+
+</main>
+
+<script type="module" src="./js/place_main.js"></script>
+
+</body>
+</html>
+

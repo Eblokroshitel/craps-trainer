@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Craps Trainer — Prop Box</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./prop-box.css">
+</head>
+
+<body>
+<nav class="bet-navigation">
+    <a href="prop_box.html">Prop Bets</a>
+    <a href="place_bets.html">Place Bets</a>
+    <a href="lay_odds.html">Laying Odds</a>
+</nav>
+
+<main class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div>
+            <span class="category">PROP BOX</span>
+            <h1>Calculate the payout</h1>
+        </div>
+
+        <!-- <div class="score">
+            <span>Score</span>
+            <strong id="score">0 / 0</strong>
+        </div> -->
+
+    </header>
+
+
+    <!-- TRAINER -->
+    <section class="trainer-card">
+
+        <!-- PROP BET SELECTOR -->
+        <div class="bet-selector">
+
+            <label for="propBetType">
+                What do you want to practice?
+            </label>
+
+            <select id="propBetType">
+
+                <option value="hornBet">
+                    Horn Bet
+                </option>
+
+                <option value="hornHigh">
+                    Horn High's
+                </option>
+
+                <option value="cAndE">
+                    C & E
+                </option>
+                
+                <option value="worldBet">
+                    World Bet
+                </option>
+
+                <option value="any7">
+                    Any 7
+                </option>
+
+                <option value="anyCraps">
+                    Any Craps
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- BET -->
+        <div class="question">
+
+            <div class="question-label">
+                Your bet
+            </div>
+
+            <div class="bet">
+
+                <span id="betAmount" class="amount">
+                    $25
+                </span>
+
+                <span class="separator">
+                    on
+                </span>
+
+                <span id="betName" class="bet-name">
+                    Any 7
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- DICE -->
+        <div class="roll-section">
+
+            <div class="question-label">
+                Roll
+            </div>
+
+
+            <div class="dice">
+
+                <!-- DIE 1 -->
+                <div id="die1" class="die" data-value="4">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+
+                <!-- DIE 2 -->
+                <div id="die2" class="die" data-value="3">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ANSWER -->
+        <div class="answer">
+
+            <label for="answer">
+                Your answer
+            </label>
+
+            <div class="answer-input">
+
+                <span>$</span>
+
+                <input
+                    id="answer"
+                    type="number"
+                    step="0.01"
+                    min="0"
+                    placeholder="0.00"
+                    autocomplete="off"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- CHECK -->
+        <button id="checkAnswer" class="button">
+            Check Answer
+        </button>
+
+
+        <!-- FEEDBACK -->
+        <div id="feedback" class="feedback hidden">
+
+            <span id="feedbackTitle"></span>
+
+            <span id="feedbackText"></span>
+
+        </div>
+
+
+        <!-- NEXT -->
+        <button id="nextQuestion" class="next-button hidden">
+            Next Question
+        </button>
+
+    </section>
+
+
+    <!-- STATS -->
+    <div class="stats">
+
+        <div class="stat">
+
+            <span>Correct</span>
+
+            <strong id="correctCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="stat">
+
+            <span>Wrong</span>
+
+            <strong id="wrongCount">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="stat">
+
+            <span>Accuracy</span>
+
+            <strong id="accuracy">
+                0%
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+        By Dmitrii Tazetdinov
+    </footer>
+
+</main>
+
+
+<script type="module" src="./js/game.js"></script>
+
+</body>
+</html>
